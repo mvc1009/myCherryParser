@@ -201,3 +201,19 @@ Each node have an array of subnodes.
 }
 ```
 
+# Usage
+
+We can parse a JSON with the following command:
+
+```
+python3 myCherryParser.py input.json output.ctd
+```
+
+Or we can import the library to our scripts:
+
+```
+from myCherryParser import *
+
+parser = myCherryParser("input.json", "output.ctd")
+parser.parse()
+```

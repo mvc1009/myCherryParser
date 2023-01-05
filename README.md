@@ -205,13 +205,13 @@ Each node have an array of subnodes.
 
 We can parse a JSON with the following command:
 
-```
+```bash
 python3 myCherryParser.py input.json output.ctd
 ```
 
 Or we can import the library to our scripts:
 
-```
+```python
 from myCherryParser import *
 
 parser = myCherryParser("input.json", "output.ctd")

@@ -1,0 +1,99 @@
+{
+	"info_node" : {
+		"node_name" : "Hosts",
+		"icon" : "warning",
+		"bold" : true,
+		"color" : "red"
+	},
+	"content_node" : [
+		{
+			"type" : "image",
+			"path" : "/tmp/img.png"
+		},
+		{
+			"type" : "text",
+			"string" : "Loren Ipsum",
+			"style" : [
+				"h1",
+				"bold",
+				"italic"
+			]
+		}
+
+	],
+	"sub_node" : [
+		{
+			"info_node" : {
+				"node_name" : "10.10.10.10",
+				"icon" : "home",
+				"bold" : true,
+				"color" : "red"
+			},
+			"content_node" : [
+				{
+					"type" : "text",
+					"string" : "NMAP_RESULT",
+					"style" : [
+						"h1",
+						"bold",
+						"italic",
+						"underline"
+					]
+				}
+			],
+			"sub_node" : [
+				{
+					"info_node" : {
+						"node_name" : "Info",
+						"icon" : "info",
+						"bold" : false,
+						"color" : "black"
+					},
+					"content_node" : [
+
+					],
+
+					"sub_node" : [
+						
+					]
+				}
+			]
+		},
+		{
+			"info_node" : {
+				"node_name" : "10.10.10.11",
+				"icon" : "home",
+				"bold" : true,
+				"color" : "red"
+			},
+			"content_node" : [
+				{
+					"type" : "text",
+					"string" : "NMAP_RESULT",
+					"style" : [
+						"h1",
+						"bold",
+						"italic"
+					]
+				}
+			],
+			"sub_node" : [
+				{
+					"info_node" : {
+						"node_name" : "Info",
+						"icon" : "info",
+						"bold" : false,
+						"color" : "black"
+					},
+					"content_node" : [
+
+					],
+
+					"sub_node" : [
+						
+					]
+				}
+			]
+		}
+	]
+}

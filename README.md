@@ -93,6 +93,17 @@ h2
 h3
 ```
 
+```JSON
+{
+	"type" : "text",
+	"string" : "Loren Ipsum",
+	"style" : [
+		"h1",
+		"bold",
+		"italic"
+	]
+}
+```
 ### Sub_Node Array
 
 Each node have an array of subnodes.

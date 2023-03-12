@@ -43,24 +43,24 @@ class myCherryParser():
 	def __repr__(self):
 		return "<%s %s at %#x>" % (self.__class__.__name__, self.input_file, id(self))
 
-	def parse_node_info(self, info):
+	def parse_node_info(self, data):
 		icon = None
 		info = None
 		bold = False
 		node_name = ""
 		color = None
 
-		if info['icon']:
-			icon = ICON[info['icon']]
+		if 'icon' in data.keys():
+			icon = ICON[data['icon']]
 
-		if info['bold']:
-			bold = info['bold']
+		if 'bold' in data.keys():
+			bold = data['bold']
 
-		if info['node_name']:
-			node_name = info['node_name']
+		if 'node_name' in data.keys():
+			node_name = data['node_name']
 
-		if info['color']:
-			color = COLOR[info['color']]
+		if 'color' in data.keys():
+			color = COLOR[data['color']]
 
 		return icon, bold, node_name, color
 
@@ -112,7 +112,9 @@ class myCherryParser():
 		# Parse JSON
 		json_file = open(self.input_file)
 		data = json.load(json_file)
-
+		print(data)
+		print("----")
+		print(data['info_node'])
 
 		# Initial Node
 		# ----------

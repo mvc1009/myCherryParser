@@ -10,7 +10,8 @@ import json, base64
 COLOR = {
 	"black" : "#000000",
 	"red" : "#ff0000",
-	"gray" : "#bfbfbf"
+	"gray" : "#bfbfbf",
+	"white" : "#ffffff"
 }
 
 ICON = {
@@ -43,7 +44,25 @@ class myCherryParser():
 		return "<%s %s at %#x>" % (self.__class__.__name__, self.input_file, id(self))
 
 	def parse_node_info(self, info):
-		return ICON[info['icon']], info['bold'], info['node_name'], COLOR[info['color']]
+		icon = None
+		info = None
+		bold = False
+		node_name = ""
+		color = None
+
+		if info['icon']:
+			icon = ICON[info['icon']]
+
+		if info['bold']:
+			bold = info['bold']
+
+		if info['node_name']:
+			node_name = info['node_name']
+
+		if info['color']:
+			color = COLOR[info['color']]
+
+		return icon, bold, node_name, color
 
 	def fill_node_with_content(self, element, data):
 		# Array of contents

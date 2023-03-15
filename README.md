@@ -76,6 +76,43 @@ An image content have only two attributes.
 }
 ```
 
+#### Image_b64 Content
+
+An image content have only two attributes.
+
+* `type <str>`: Which will be `image_b64`.
+* `image <str>`: Image converted to Base64.
+
+```JSON
+{
+	"type" : "image_b64",
+	"image" : "iVBORw0KGgoAAAANSUhE..<BASE64>"
+}
+```
+
+#### Table Content
+
+A table content have only two attributes.
+
+* `type <str>`: Which will be `table`.
+* `cells`: List of rows. Similar to a CSV.
+
+```JSON
+{
+	"type" : "table",
+	"cells" : [
+		[
+			"row1,cell1",
+			"row1,cell2"	
+		],
+		[	
+			"row2,cell1",
+			"row2,cell2"
+		]
+	]
+}
+```
+
 #### Text Content
 
 A Text content have the following attributes.

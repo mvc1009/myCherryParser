@@ -88,10 +88,13 @@ class myCherryParser():
 				
 			# Images
 			elif content['type'] == "image":
-				with open(content['path'], "rb") as img_file:
-					my_image = base64.b64encode(img_file.read())
-				ET.SubElement(element, "encoded_png", char_offset="99999999", justification="center", link="").text=my_image
-				ET.SubElement(element, "rich_text", style="", weight="").text="\n\n"
+				try:
+					with open(content['path'], "rb") as img_file:
+						my_image = base64.b64encode(img_file.read())
+					ET.SubElement(element, "encoded_png", char_offset="99999999", justification="center", link="").text=my_image
+					ET.SubElement(element, "rich_text", style="", weight="").text="\n\n"
+				except:
+					pass
 
 			elif content['type'] == "image_b64":
 				ET.SubElement(element, "encoded_png", char_offset="99999999", justification="center", link="").text=content['image']
